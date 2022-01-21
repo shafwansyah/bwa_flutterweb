@@ -20,32 +20,28 @@ class _LandingPageState extends State<LandingPage> {
             selectedIndex = index;
           });
         },
-        child: Padding(
-          padding: const EdgeInsets.only(left: 50),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                navLink,
-                style: GoogleFonts.poppins(
-                  fontSize: 18,
-                  fontWeight: index == selectedIndex
-                      ? FontWeight.w500
-                      : FontWeight.w300,
-                ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              navLink,
+              style: GoogleFonts.poppins(
+                fontSize: 18,
+                fontWeight:
+                    index == selectedIndex ? FontWeight.w500 : FontWeight.w300,
               ),
-              Container(
-                width: 66,
-                height: 2,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: index == selectedIndex
-                      ? Color(0xfffe998d)
-                      : Colors.transparent,
-                ),
+            ),
+            Container(
+              width: 66,
+              height: 2,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: index == selectedIndex
+                    ? Color(0xfffe998d)
+                    : Colors.transparent,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
@@ -74,9 +70,21 @@ class _LandingPageState extends State<LandingPage> {
                     ),
                     Row(
                       children: [
+                        SizedBox(
+                          width: 50,
+                        ),
                         navItem("Guides", 0),
+                        SizedBox(
+                          width: 50,
+                        ),
                         navItem("Pricing", 1),
+                        SizedBox(
+                          width: 50,
+                        ),
                         navItem("Teams", 2),
+                        SizedBox(
+                          width: 50,
+                        ),
                         navItem("Stories", 3),
                       ],
                     ),
